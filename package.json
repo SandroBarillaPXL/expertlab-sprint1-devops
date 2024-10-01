@@ -1,0 +1,26 @@
+{
+  "name": "expertlab-sprint1-devops",
+  "version": "1.0.0",
+  "description": "This repository serves as a PoC of GitHub Actions",
+  "main": "scripts/index.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node ./tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandroBarillaPXL/expertlab-sprint1-devops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandroBarillaPXL/expertlab-sprint1-devops/issues"
+  },
+  "homepage": "https://github.com/SandroBarillaPXL/expertlab-sprint1-devops#readme",
+  "dependencies": {
+    "unit.js": "^2.1.1"
+  }
+}
