@@ -1,15 +1,9 @@
-// load Unit.js module
+// load Unit.js module and addnumbers function
 import test from 'unit.js';
-import { addNumbers } from '../scripts/script.js';
+import { addNumbers } from '../scripts/functions.js';
 
-// Import the function to be tested
-
-
-// just for example of tested value
-var test_value = addNumbers(1, 2);
-
-// assert that example variable is a string
-if (test.value(test_value).is(3)) {
+// assert that functions return the correct value
+if (test.value(addNumbers(1, 2)).is(3)) {
     console.log('Test passed');
 } else {
     console.log('Test failed');

@@ -1,8 +1,5 @@
 'use strict';
-
-export function addNumbers(a, b) {
-    return a + b;
-}
+import { addNumbers } from '../scripts/functions.js';
 
 var addButton = document.getElementById('addButton');
 var firstNumber = document.getElementById('num1');
