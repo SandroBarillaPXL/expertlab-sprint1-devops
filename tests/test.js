@@ -3,7 +3,7 @@ import test from 'unit.js';
 import { addNumbers, divNumbers, mulNumbers, subNumbers } from '../scripts/functions.js';
 
 // assert that functions return the correct value
-if (test.value(addNumbers(1, 0)).is(3)) {
+if (test.value(addNumbers(1, 2)).is(3)) {
     console.log('Test passed');
 } else {
     console.log('Test failed');
