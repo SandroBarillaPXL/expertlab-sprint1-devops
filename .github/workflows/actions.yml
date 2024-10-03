@@ -27,10 +27,11 @@ jobs:
                   if [[ "$COMMIT_MSG" == "[TAG]"*  ]]; then
                     TAG=$(echo $COMMIT_MSG | grep -oP '(?<=\[TAG\])\S+')
                     echo "TAG=$TAG" >> $GITHUB_ENV
+                    echo "TAG1: $TAG"
                   else
                     echo "TAG=latest" >> $GITHUB_ENV
-                  fi
-                  echo "TAG: $TAG"
+                    echo "TAG2: $TAG"
+                  fi                  
               #source: https://chatgpt.com/share/66fe5874-6410-8009-ab95-d2fe9956a708
 
             - name: Login to Docker Hub
