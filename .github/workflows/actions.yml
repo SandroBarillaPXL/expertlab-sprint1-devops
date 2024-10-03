@@ -24,7 +24,7 @@ jobs:
               run: npm test
     docker:
         runs-on: ubuntu-latest
-        #needs: test
+        needs: test
         steps:
             - name: Set image tag
               run: |
