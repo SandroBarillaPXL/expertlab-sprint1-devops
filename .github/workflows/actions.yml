@@ -26,7 +26,7 @@ jobs:
                   COMMIT_MSG="${{ github.event.head_commit.message }}"
                   echo "Commit message: $COMMIT_MSG" 
                   if [[ "$COMMIT_MSG" =~ ^\[TAG\] ]]; then
-                    TAG=$(echo "$COMMIT_MSG" | sed 's/^\[TAG\] *//')
+                    TAG=$(echo "$COMMIT_MSG" | sed 's/^\[TAG\] *//' | tr -d '\r\n')
                     echo "TAG=$TAG" >> $GITHUB_ENV
                   else
                     echo "TAG=latest" >> $GITHUB_ENV
