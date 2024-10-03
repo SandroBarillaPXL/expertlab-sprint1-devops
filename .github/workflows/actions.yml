@@ -24,11 +24,11 @@ jobs:
             - name: Set image tag
               run: |
                   COMMIT_MSG="${{ github.event.head_commit.message }}"
-                  if [[ "$COMMIT_MSG" =~ ^\[TAG\] ]]; then
+                  if [[ "$COMMIT_MSG" == "[TAG]"*  ]]; then
                     TAG=$(echo $COMMIT_MSG | grep -oP '(?<=\[TAG\])\S+')
                     echo "TAG=$TAG" >> $GITHUB_ENV
                   else
-                    echo "TAG='latest'" >> $GITHUB_ENV
+                    echo "TAG=latest" >> $GITHUB_ENV
                   fi
                   echo "TAG: $TAG"
               #source: https://chatgpt.com/share/66fe5874-6410-8009-ab95-d2fe9956a708
