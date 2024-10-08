@@ -1,5 +1,5 @@
 name: "test action"
-description: "This is a test action to use in expert lab"
+description: "This is a test action to use in expert lab. Source: https://resources.github.com/learn/pathways/automation/advanced/building-your-first-custom-github-action/"
 inputs:
   input1:
     description: "Input 1"
