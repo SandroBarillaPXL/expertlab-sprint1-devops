@@ -1,23 +1,23 @@
 version: "3"
 services:
-    website:
-        container_name: expertlab
-        image: sandropxl/expertlab:latest
-        ports:
-            - 8500:80
-    watchtower:
-        container_name: watchtower
-        image: containrrr/watchtower
-        environment:
-            - WATCHTOWER_CLEANUP=true
-            - WATCHTOWER_NOTIFICATIONS=shoutrrr
-            - WATCHTOWER_NOTIFICATION_URL=/run/secrets/pushbullet_access_token
-            - WATCHTOWER_SCHEDULE=*/15 * * * * *
-        volumes:
-            - /etc/localtime:/etc/localtime
-            - /var/run/docker.sock:/var/run/docker.sock
-        secrets:
-          - pushbullet_access_token
+  website:
+    container_name: expertlab
+    image: sandropxl/expertlab:latest
+    ports:
+        - 8500:80
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    environment:
+        - WATCHTOWER_CLEANUP=true
+        - WATCHTOWER_NOTIFICATIONS=shoutrrr
+        - WATCHTOWER_NOTIFICATION_URL=/run/secrets/pushbullet_access_token
+        - WATCHTOWER_SCHEDULE=*/15 * * * * *
+    volumes:
+        - /etc/localtime:/etc/localtime
+        - /var/run/docker.sock:/var/run/docker.sock
+    secrets:
+      - pushbullet_access_token
 secrets:
   pushbullet_access_token:
     file: ./pushbullet_access_token.txt
