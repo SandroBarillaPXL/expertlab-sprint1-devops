@@ -4,49 +4,49 @@ import { addNumbers, divNumbers, mulNumbers, subNumbers } from '../scripts/funct
 
 // assert that functions return the correct value
 if (test.value(addNumbers(1, 2)).is(3)) {
-    console.log('Test passed');
+    console.log('Addition test passed');
 } else {
-    console.log('Test failed');
+    console.log('Addition test failed');
 };
 
 if (test.value(addNumbers(1, 2)).isNot(4)) {
-    console.log('Test passed');
+    console.log('False addition test passed');
 } else {
-    console.log('Test failed');
+    console.log('False addition test failed');
 }
 
 if (test.value(subNumbers(2, 1)).is(1)) {
-    console.log('Test passed');
+    console.log('Subtraction test passed');
 } else {
-    console.log('Test failed');
+    console.log('Subtraction test failed');
 }
 
 if (test.value(subNumbers(2, 1)).isNot(2)) {
-    console.log('Test passed');
+    console.log('False subtraction test passed');
 } else {
-    console.log('Test failed');
+    console.log('False subtraction test failed');
 }
 
 if (test.value(mulNumbers(2, 3)).is(6)) {
-    console.log('Test passed');
+    console.log('Multiplication test passed');
 } else {
-    console.log('Test failed');
+    console.log('Multiplication test failed');
 }
 
 if (test.value(mulNumbers(2, 3)).isNot(5)) {
-    console.log('Test passed');
+    console.log('False multiplication test passed');
 } else {
-    console.log('Test failed');
+    console.log('False multiplication test failed');
 }
 
 if (test.value(divNumbers(6, 3)).is(2)) {
-    console.log('Test passed');
+    console.log('Division test passed');
 }   else {
-    console.log('Test failed');
+    console.log('Division test failed');
 }
 
 if (test.value(divNumbers(6, 3)).isNot(3)) {
-    console.log('Test passed');
+    console.log('False division test passed');
 } else {
-    console.log('Test failed');
+    console.log('False division test failed');
 }
