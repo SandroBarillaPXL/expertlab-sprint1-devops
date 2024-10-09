@@ -6,8 +6,8 @@ This is a simple calculator app with some *unit.js* tests. Install the dependenc
 The frontend is a simple HTML file that uses the `script.js`and `functions.js` files to perform the operations. Run the frontend with a simple HTTP server of your choice, like the "live server" extension in Visual Studio Code for local use.
 <details>
     <summary>sources</summary>
-    https://www.npmjs.com/package/unit.js<br>
-    https://unitjs.com/guide/quickstart.html
+    * https://www.npmjs.com/package/unit.js<br>
+    * https://unitjs.com/guide/quickstart.html
 </details>
 
 ## Docker
@@ -22,9 +22,9 @@ The Dockerfile uses an `nginx:alpine` base image. I chose this image because it 
 This repository has a GitHub Actions workflow that runs the tests on every push to the `main` branch. After the tests have run, another job is triggered to set the appropriate tag, log in to Docker Hub, build the Docker image and push it to Docker Hub. You can check the workflow in the `.github/workflows` folder. Additionally, the workflow has a `workflow_dispatch` trigger that allows you to manually run the workflow from the [GitHub Actions UI](https://github.com/SandroBarillaPXL/expertlab-sprint1-devops/actions/workflows/actions.yml) with custom inputs to use as a tag for the Docker image. Finally, a custom action is used to demonstrate how to create a reusable action that can be used in multiple workflows (see [the other repo](https://github.com/SandroBarillaPXL/expertlab-sprint1-action)).
 <details>
     <summary>sources</summary>
-    https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow<br>
-    https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch<br>
-    https://github.com/docker/build-push-action/tree/v3/
+    * https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow<br>
+    * https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch<br>
+    * https://github.com/docker/build-push-action/tree/v3/
 </details>
 
 ## Watchtower / Docker compose
