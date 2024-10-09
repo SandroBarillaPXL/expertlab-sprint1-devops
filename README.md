@@ -26,7 +26,7 @@ This repository has a GitHub Actions workflow that runs the tests on every push 
   <img src="imgs/action5.png" alt="Actions 5" width="600"/>
 </details>
 
-## :lighthouse: Watchtower / Docker Compose
+## :arrows_counterclockwise: Watchtower / Docker Compose
 Watchtower is a tool that automatically updates the running Docker containers when a new image is pushed to the registry. A `docker-compose.yml` file is included in the repository that starts the app and the Watchtower containers. You can start both apps with `docker-compose up -d` and then push a new image to the registry to see Watchtower in action. 
 <br><br>
 Watchtower keeps track of all the running containers and periodically checks if a newer image is available. This can be configured how you like. For rapid testing purposes, I set a cron for each 15 seconds. When a new image is pushed, Watchtower will automatically pull it and restart the app container with its original arguments, also notifying you in the process. I used a notification service called "Pushbullet" to receive notifications on my phone, but you can use any other service that Watchtower supports. My access token is stored in a textfile called `pushbullet_access_token.txt` in the root folder that is mounted as a secret in the `docker-compose.yml` file. Evidently, this file is not present in the online repository.
