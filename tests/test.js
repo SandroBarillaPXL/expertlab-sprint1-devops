@@ -15,7 +15,7 @@ if (test.value(addNumbers(1, 2)).isNot(4)) {
     console.log('False addition test failed');
 }
 
-if (test.value(subNumbers(2, 1)).is(10)) {
+if (test.value(subNumbers(2, 1)).is(1)) {
     console.log('Subtraction test passed');
 } else {
     console.log('Subtraction test failed');
